@@ -1,0 +1,77 @@
+img {
+  height: 100px;
+  width: 100px;
+  margin: 8px;
+}
+#grid {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  margin-left: -20px;
+  color: white;
+  margin-bottom: 3rem;
+  margin-top: 7rem;
+}
+
+h3 span {
+  margin-left: 6px;
+}
+
+
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0e1111;
+  }
+  
+  .star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    border-radius: 50%;
+    animation: fall 1s linear infinite;
+  }
+
+
+@keyframes fall {
+    from {
+      top: -30px;
+    }
+    to {
+      top: 100%;
+    }
+  }
+  #stars:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-position: 0 0;
+    animation: rain 60s linear infinite;
+  }
+  
+  
+  @keyframes rain {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 500px;
+    }
+  }
+  
